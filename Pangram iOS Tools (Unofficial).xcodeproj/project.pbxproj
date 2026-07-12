@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B31726FA3001D3A100CD590D /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */; };
+		B31727063001D3A200CD590D /* Check with Pangram.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B31726F73001D3A100CD590D /* Check with Pangram.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B31727193002B32B00CD590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31727183002B32B00CD590D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B31727043001D3A200CD590D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31726DD3001D2D600CD590D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31726F63001D3A100CD590D;
+			remoteInfo = "Check with Pangram";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B317270B3001D3A200CD590D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B31727063001D3A200CD590D /* Check with Pangram.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pangram iOS Tools (Unofficial).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31726F73001D3A100CD590D /* Check with Pangram.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Check with Pangram.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		B31727183002B32B00CD590D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B31727073001D3A200CD590D /* Exceptions for "Check with Pangram" folder in "Check with Pangram" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B31726F63001D3A100CD590D /* Check with Pangram */;
+		};
+		B3DD769530033C3700BB4DB0 /* Exceptions for "Pangram iOS Tools (Unofficial)" folder in "Check with Pangram" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CheckClipboardIntent.swift,
+				PangramClient.swift,
+			);
+			target = B31726F63001D3A100CD590D /* Check with Pangram */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B3DD769530033C3700BB4DB0 /* Exceptions for "Pangram iOS Tools (Unofficial)" folder in "Check with Pangram" target */,
+			);
 			path = "Pangram iOS Tools (Unofficial)";
+			sourceTree = "<group>";
+		};
+		B31726FB3001D3A100CD590D /* Check with Pangram */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B31727073001D3A200CD590D /* Exceptions for "Check with Pangram" folder in "Check with Pangram" target */,
+			);
+			path = "Check with Pangram";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B31726F43001D3A100CD590D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31726FA3001D3A100CD590D /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B31726DC3001D2D600CD590D = {
 			isa = PBXGroup;
 			children = (
+				B31727183002B32B00CD590D /* Assets.xcassets */,
 				B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
+				B31726FB3001D3A100CD590D /* Check with Pangram */,
+				B31726F83001D3A100CD590D /* Frameworks */,
 				B31726E63001D2D600CD590D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +114,17 @@
 			isa = PBXGroup;
 			children = (
 				B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */,
+				B31726F73001D3A100CD590D /* Check with Pangram.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B31726F83001D3A100CD590D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				B31726E13001D2D600CD590D /* Sources */,
 				B31726E23001D2D600CD590D /* Frameworks */,
 				B31726E33001D2D600CD590D /* Resources */,
+				B317270B3001D3A200CD590D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B31727053001D3A200CD590D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
@@ -69,6 +153,28 @@
 			productName = "Pangram iOS Tools (Unofficial)";
 			productReference = B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */;
 			productType = "com.apple.product-type.application";
+		};
+		B31726F63001D3A100CD590D /* Check with Pangram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31727083001D3A200CD590D /* Build configuration list for PBXNativeTarget "Check with Pangram" */;
+			buildPhases = (
+				B31726F33001D3A100CD590D /* Sources */,
+				B31726F43001D3A100CD590D /* Frameworks */,
+				B31726F53001D3A100CD590D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B31726FB3001D3A100CD590D /* Check with Pangram */,
+			);
+			name = "Check with Pangram";
+			packageProductDependencies = (
+			);
+			productName = "Check with Pangram";
+			productReference = B31726F73001D3A100CD590D /* Check with Pangram.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					B31726E43001D2D600CD590D = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					B31726F63001D3A100CD590D = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -100,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				B31726E43001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
+				B31726F63001D3A100CD590D /* Check with Pangram */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +219,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B31726F53001D3A100CD590D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31727193002B32B00CD590D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +240,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B31726F33001D3A100CD590D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B31727053001D3A200CD590D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B31726F63001D3A100CD590D /* Check with Pangram */;
+			targetProxy = B31727043001D3A200CD590D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B31726EE3001D2D700CD590D /* Debug */ = {
@@ -251,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pangram iOS Tools (Unofficial)/Pangram iOS Tools (Unofficial).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -283,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pangram iOS Tools (Unofficial)/Pangram iOS Tools (Unofficial).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -310,6 +445,68 @@
 			};
 			name = Release;
 		};
+		B31727093001D3A200CD590D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Check with Pangram/Check with Pangram.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D65334WDJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Check with Pangram/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Check with Pangram";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-.Check-with-Pangram";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B317270A3001D3A200CD590D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Check with Pangram/Check with Pangram.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D65334WDJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Check with Pangram/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Check with Pangram";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-.Check-with-Pangram";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +524,15 @@
 			buildConfigurations = (
 				B31726F13001D2D700CD590D /* Debug */,
 				B31726F23001D2D700CD590D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31727083001D3A200CD590D /* Build configuration list for PBXNativeTarget "Check with Pangram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31727093001D3A200CD590D /* Debug */,
+				B317270A3001D3A200CD590D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
