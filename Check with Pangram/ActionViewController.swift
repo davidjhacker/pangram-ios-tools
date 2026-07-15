@@ -3,10 +3,7 @@ import UniformTypeIdentifiers
 
 class ActionViewController: UIViewController {
 
-    private var apiKey: String {
-            UserDefaults(suiteName: "group.com.davidhacker.pangram")?
-                .string(forKey: "pangramAPIKey") ?? ""
-    }
+    private var apiKey: String { Pangram.apiKey }
 
     // MARK: - Views
     private let snippetLabel = UILabel()
@@ -148,7 +145,6 @@ class ActionViewController: UIViewController {
     }
     
     private func check(_ text: String) async {
-            print("PANGRAM ext: key length \(apiKey.count)")
             checkedText = text
             guard !apiKey.isEmpty else {
                         await MainActor.run {

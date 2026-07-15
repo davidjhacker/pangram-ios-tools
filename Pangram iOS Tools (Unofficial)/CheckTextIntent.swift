@@ -1,14 +1,13 @@
 //
-//  CheckClipboardIntent.swift
+//  CheckTextIntent.swift
 //  Pangram iOS Tools (Unofficial)
 //
 //  Created by David Hacker on 7/11/26.
 //
 
 import AppIntents
-import UIKit
 
-struct CheckClipboardIntent: AppIntent {
+struct CheckTextIntent: AppIntent {
     static var title: LocalizedStringResource = "Check Text with Pangram"
     static var description = IntentDescription(
         "Runs Pangram AI detection on the provided text.")
@@ -19,14 +18,14 @@ struct CheckClipboardIntent: AppIntent {
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else {
-            return .result(dialog: "No text provided — copy some text first.")
+            return .result(dialog: "No text provided.")
         }
         let words = trimmed.split(whereSeparator: \.isWhitespace).count
         guard words >= 50 else {
             return .result(dialog: "Pangram needs at least 50 words (\(words) provided).")
         }
-        guard let key = UserDefaults(suiteName: "group.davidhacker.pangram")?
-                .string(forKey: "pangramAPIKey"), !key.isEmpty else {
+        let key = Pangram.apiKey
+        guard !key.isEmpty else {
             return .result(dialog: "Open the Pangram app and save your API key first.")
         }
         let r = try await Pangram.check(trimmed, apiKey: key)
@@ -38,12 +37,12 @@ struct CheckClipboardIntent: AppIntent {
 struct PangramShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
-            intent: CheckClipboardIntent(),
+            intent: CheckTextIntent(),
             phrases: [
-                "Check my clipboard with \(.applicationName)",
-                "Run \(.applicationName) on my clipboard"
+                "Check text with \(.applicationName)",
+                "Run \(.applicationName) on my text"
             ],
-            shortTitle: "Check Copied Text",
+            shortTitle: "Check Text",
             systemImageName: "text.magnifyingglass"
         )
     }
