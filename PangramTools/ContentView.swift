@@ -13,17 +13,9 @@ struct ContentView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextEditor(text: $text)
-                        .frame(minHeight: 120)
+                    TextField("Paste text here…", text: $text, axis: .vertical)
+                        .lineLimit(3...10)
                         .autocorrectionDisabled()
-                        .overlay(alignment: .topLeading) {
-                            if text.isEmpty {
-                                Text("Paste text here…")
-                                    .foregroundStyle(.tertiary)
-                                    .padding(.top, 8)
-                                    .allowsHitTesting(false)
-                            }
-                        }
                     Button(checking ? "Checking…" : "Check") {
                         Task { await check() }
                     }
@@ -39,13 +31,15 @@ struct ContentView: View {
 
                 Section {
                     HStack {
+                        Text("API key")
                         Group {
                             if showKey {
-                                TextField("Pangram API key", text: $apiKey)
+                                TextField("Required", text: $apiKey)
                             } else {
-                                SecureField("Pangram API key", text: $apiKey)
+                                SecureField("Required", text: $apiKey)
                             }
                         }
+                        .multilineTextAlignment(.trailing)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
 
@@ -65,7 +59,7 @@ struct ContentView: View {
                     Text("Get a key at pangram.com → API tab. Stored in the iOS Keychain, only ever sent to Pangram.")
                 }
             }
-            .navigationTitle("Pangram")
+            .navigationTitle("Check with Pangram")
             .onAppear { apiKey = Pangram.apiKey }
             .onChange(of: apiKey) { saved = false }
         }

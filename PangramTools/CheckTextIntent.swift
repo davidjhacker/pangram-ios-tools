@@ -12,7 +12,7 @@ struct CheckTextIntent: AppIntent {
     static var description = IntentDescription(
         "Runs Pangram AI detection on the provided text.")
 
-    @Parameter(title: "Text")
+    @Parameter(title: "Text", requestValueDialog: "What text should I check?")
     var text: String
 
     func perform() async throws -> some IntentResult & ProvidesDialog {

@@ -7,6 +7,7 @@
 //  Shared between the app and the Check with Pangram extension.
 //
 
+
 import Foundation
 import Security
 
@@ -17,7 +18,7 @@ enum Pangram {
     /// Keychain access group so the app and extension share the API key.
     /// Building from source under your own team? Create your own group and
     /// change it here and in both .entitlements files.
-    static let appGroup = "group.com.davidhacker.pangram"
+    nonisolated static let appGroup = "group.com.davidhacker.pangram"
 
     nonisolated static var apiKey: String {
         get { Keychain.read() ?? "" }
@@ -80,14 +81,11 @@ enum Pangram {
 /// via backups.
 private nonisolated enum Keychain {
     private static var baseQuery: [String: Any] {
-        var q: [String: Any] = [
+        [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: "PangramAPIKey",
+            kSecAttrAccessGroup as String: Pangram.appGroup,
         ]
-        #if !targetEnvironment(simulator)
-        q[kSecAttrAccessGroup as String] = Pangram.appGroup
-        #endif
-        return q
     }
 
     static func read() -> String? {
