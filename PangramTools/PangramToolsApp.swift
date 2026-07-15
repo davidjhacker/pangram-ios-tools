@@ -1,5 +1,5 @@
 //
-//  Pangram_iOS_Tools__Unofficial_App.swift
+//  PangramToolsApp.swift
 //  Pangram iOS Tools (Unofficial)
 //
 //  Created by David Hacker on 7/10/26.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Pangram_iOS_Tools__Unofficial_App: App {
+struct PangramToolsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

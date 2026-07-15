@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B31726FA3001D3A100CD590D /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */; };
 		B31727063001D3A200CD590D /* Check with Pangram.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B31726F73001D3A100CD590D /* Check with Pangram.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B31727193002B32B00CD590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31727183002B32B00CD590D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 		B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pangram iOS Tools (Unofficial).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31726F73001D3A100CD590D /* Check with Pangram.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Check with Pangram.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
-		B31727183002B32B00CD590D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -67,7 +65,7 @@
 			exceptions = (
 				B3DD769530033C3700BB4DB0 /* Exceptions for "Pangram iOS Tools (Unofficial)" folder in "Check with Pangram" target */,
 			);
-			path = "Pangram iOS Tools (Unofficial)";
+			path = PangramTools;
 			sourceTree = "<group>";
 		};
 		B31726FB3001D3A100CD590D /* Check with Pangram */ = {
@@ -75,7 +73,7 @@
 			exceptions = (
 				B31727073001D3A200CD590D /* Exceptions for "Check with Pangram" folder in "Check with Pangram" target */,
 			);
-			path = "Check with Pangram";
+			path = CheckWithPangram;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -102,7 +100,6 @@
 		B31726DC3001D2D600CD590D = {
 			isa = PBXGroup;
 			children = (
-				B31727183002B32B00CD590D /* Assets.xcassets */,
 				B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
 				B31726FB3001D3A100CD590D /* Check with Pangram */,
 				B31726F83001D3A100CD590D /* Frameworks */,
@@ -226,7 +223,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31727193002B32B00CD590D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Pangram iOS Tools (Unofficial)/Pangram iOS Tools (Unofficial).entitlements";
+				CODE_SIGN_ENTITLEMENTS = PangramTools/PangramTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -417,7 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Pangram iOS Tools (Unofficial)/Pangram iOS Tools (Unofficial).entitlements";
+				CODE_SIGN_ENTITLEMENTS = PangramTools/PangramTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -450,12 +446,12 @@
 			buildSettings = {
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Check with Pangram/Check with Pangram.entitlements";
+				CODE_SIGN_ENTITLEMENTS = CheckWithPangram/CheckWithPangram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Check with Pangram/Info.plist";
+				INFOPLIST_FILE = CheckWithPangram/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Check with Pangram";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,12 +477,12 @@
 			buildSettings = {
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Check with Pangram/Check with Pangram.entitlements";
+				CODE_SIGN_ENTITLEMENTS = CheckWithPangram/CheckWithPangram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Check with Pangram/Info.plist";
+				INFOPLIST_FILE = CheckWithPangram/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Check with Pangram";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
