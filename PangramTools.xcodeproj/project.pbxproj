@@ -42,14 +42,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B31727073001D3A200CD590D /* Exceptions for "Check with Pangram" folder in "Check with Pangram" target */ = {
+		B31727073001D3A200CD590D /* Exceptions for "CheckWithPangram" folder in "Check with Pangram" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = B31726F63001D3A100CD590D /* Check with Pangram */;
 		};
-		B3DD769530033C3700BB4DB0 /* Exceptions for "Pangram iOS Tools (Unofficial)" folder in "Check with Pangram" target */ = {
+		B3DD769530033C3700BB4DB0 /* Exceptions for "PangramTools" folder in "Check with Pangram" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				PangramClient.swift,
@@ -59,18 +59,18 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */ = {
+		B31726E73001D2D600CD590D /* PangramTools */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B3DD769530033C3700BB4DB0 /* Exceptions for "Pangram iOS Tools (Unofficial)" folder in "Check with Pangram" target */,
+				B3DD769530033C3700BB4DB0 /* Exceptions for "PangramTools" folder in "Check with Pangram" target */,
 			);
 			path = PangramTools;
 			sourceTree = "<group>";
 		};
-		B31726FB3001D3A100CD590D /* Check with Pangram */ = {
+		B31726FB3001D3A100CD590D /* CheckWithPangram */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B31727073001D3A200CD590D /* Exceptions for "Check with Pangram" folder in "Check with Pangram" target */,
+				B31727073001D3A200CD590D /* Exceptions for "CheckWithPangram" folder in "Check with Pangram" target */,
 			);
 			path = CheckWithPangram;
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 		B31726DC3001D2D600CD590D = {
 			isa = PBXGroup;
 			children = (
-				B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
-				B31726FB3001D3A100CD590D /* Check with Pangram */,
+				B31726E73001D2D600CD590D /* PangramTools */,
+				B31726FB3001D3A100CD590D /* CheckWithPangram */,
 				B31726F83001D3A100CD590D /* Frameworks */,
 				B31726E63001D2D600CD590D /* Products */,
 			);
@@ -141,7 +141,7 @@
 				B31727053001D3A200CD590D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				B31726E73001D2D600CD590D /* Pangram iOS Tools (Unofficial) */,
+				B31726E73001D2D600CD590D /* PangramTools */,
 			);
 			name = "Pangram iOS Tools (Unofficial)";
 			packageProductDependencies = (
@@ -163,7 +163,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B31726FB3001D3A100CD590D /* Check with Pangram */,
+				B31726FB3001D3A100CD590D /* CheckWithPangram */,
 			);
 			name = "Check with Pangram";
 			packageProductDependencies = (
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B31726E03001D2D600CD590D /* Build configuration list for PBXProject "Pangram iOS Tools (Unofficial)" */;
+			buildConfigurationList = B31726E03001D2D600CD590D /* Build configuration list for PBXProject "PangramTools" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -380,6 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PangramTools/PangramTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -399,6 +400,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -415,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PangramTools/PangramTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D65334WDJ2;
@@ -434,6 +437,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -509,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B31726E03001D2D600CD590D /* Build configuration list for PBXProject "Pangram iOS Tools (Unofficial)" */ = {
+		B31726E03001D2D600CD590D /* Build configuration list for PBXProject "PangramTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31726EE3001D2D700CD590D /* Debug */,
