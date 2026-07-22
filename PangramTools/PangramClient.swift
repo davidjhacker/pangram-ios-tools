@@ -67,8 +67,12 @@ enum Pangram {
     }
     private static func result(from json: [String: Any]) -> Result? {
         guard json["stage"] as? String == "STAGE_SUCCESS" else { return nil }
+        let frac: Double
+        if let d = json["fraction_ai"] as? Double { frac = d }
+        else if let n = json["fraction_ai"] as? NSNumber { frac = n.doubleValue }
+        else { frac = 0 }
         return Result(prediction: json["prediction_short"] as? String ?? "Unknown",
-                      fractionAI: json["fraction_ai"] as? Double ?? 0)
+                      fractionAI: frac)
     }
     private static func err(_ m: String) -> NSError {
         NSError(domain: "Pangram", code: 1, userInfo: [NSLocalizedDescriptionKey: m])

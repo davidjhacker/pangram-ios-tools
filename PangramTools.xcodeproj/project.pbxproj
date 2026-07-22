@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pangram iOS Tools (Unofficial).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31726E53001D2D600CD590D /* Pangram iOS Tools (Unofficial).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PangramTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31726F73001D3A100CD590D /* Check with Pangram.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Check with Pangram.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31726F93001D3A100CD590D /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -399,7 +399,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PangramTools;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -436,7 +436,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidhacker.Pangram-iOS-Tools--Unofficial-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PangramTools;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;

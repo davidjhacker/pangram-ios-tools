@@ -14,7 +14,7 @@ struct ContentView: View {
             Form {
                 Section {
                     TextField("Paste text here…", text: $text, axis: .vertical)
-                        .lineLimit(3...10)
+                        .lineLimit(1...10)
                         .autocorrectionDisabled()
                     Button(checking ? "Checking…" : "Check") {
                         Task { await check() }
@@ -26,7 +26,15 @@ struct ContentView: View {
                             .font(.callout)
                     }
                 } footer: {
-                    Text("Paste text to check it here — or select text anywhere and use Share → Check with Pangram, or the “Check Text” action in Shortcuts.")
+                    Text("For more convenient use, configure via Shortcuts or highlight text and select Share → Check with Pangram")
+                }
+
+                Section {
+                    Link(destination: URL(string: "https://www.icloud.com/shortcuts/94165e3a058e47dc94ae351ad38bad85")!) {
+                        Label("Add Recommended Shortcut", systemImage: "plus.rectangle.on.rectangle")
+                    }
+                } footer: {
+                    Text("Installs a shortcut that checks whatever text is on your screen with Pangram. For easist use, add this shortcut under Settings → Accessibility → Touch → Back Tap → Double Tap.")
                 }
 
                 Section {
@@ -56,10 +64,10 @@ struct ContentView: View {
                         saved = true
                     }
                 } footer: {
-                    Text("Get a key at pangram.com → API tab. Stored in the iOS Keychain, only ever sent to Pangram.")
+                    Text("Stored in the iOS Keychain, only ever sent to Pangram.")
                 }
             }
-            .navigationTitle("Check with Pangram")
+            .navigationTitle("Pangram iOS Tools")
             .onAppear { apiKey = Pangram.apiKey }
             .onChange(of: apiKey) { saved = false }
         }
